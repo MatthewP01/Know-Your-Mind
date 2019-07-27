@@ -1,10 +1,11 @@
-document.addEventListener("DOMContentLoaded", function(){
-
 function main() {
   // Three.js tutorials used
 
   // Render the data to the canvas
   const canvas = document.querySelector('#c');
+
+  const annotation = document.querySelector('.annotation')
+
   const renderer = new THREE.WebGLRenderer({
     canvas,
     alpha: true
@@ -17,7 +18,7 @@ function main() {
   // Create camera and scene view
   let fieldOfView = 55
   let aspect = window.innerWidth / window.innerHeight
-  const camera = new THREE.PerspectiveCamera( fieldOfView, aspect, 1, 1000 );
+  const camera = new THREE.PerspectiveCamera( fieldOfView, aspect, 1, 2000 );
 	camera.position.set(0.5, 0.9, 2.7);
 
   // Load in the GLTF brain model
@@ -54,6 +55,7 @@ function main() {
 
   function render(time) {
 
+
     if (resizeRendererToDisplaySize(renderer)) {
       const canvas = renderer.domElement;
       camera.aspect = canvas.clientWidth / canvas.clientHeight;
@@ -70,6 +72,9 @@ function main() {
 
   // Orbit controls to rotate brain
   const controls = new THREE.OrbitControls( camera, renderer.domElement );
+  controls.target.set( 0, - 0.2, - 0.2 );
+	controls.update();
+  controls.enableZoom = false;
 
   function animate() {
     requestAnimationFrame( animate );
@@ -78,9 +83,6 @@ function main() {
 
 	  renderer.render( scene, camera );
   }
-
 }
 
 main();
-
-})

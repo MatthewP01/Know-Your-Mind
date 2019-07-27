@@ -1,9 +1,10 @@
-document.addEventListener("DOMContentLoaded", function(){
-  const canvas = document.getElementById('c')
-  const sideBar = document.getElementById('sidebar')
 
-  canvas.addEventListener('click', function(e){
-    sidebar.innerHTML +=
+  
+  // const sideBar = document.getElementById('sidebar')
+  // const currentDisplay = document.querySelector('.current-display')
+
+  nodePress.addEventListener('click', function(e){
+    currentDisplay.innerHTML +=
     `<div class="wrapper">
     <!-- Sidebar -->
     <nav id="side-bar">
@@ -68,4 +69,3 @@ document.addEventListener("DOMContentLoaded", function(){
     </div>
 </div>`
   })
-})

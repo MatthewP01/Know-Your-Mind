@@ -1,12 +1,13 @@
 <html>
 	<head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"/>
     <title>Know your Mind</title>
   	<meta charset=utf-8>
     <script src="https://threejsfundamentals.org/threejs/resources/threejs/r105/three.min.js"></script>
     <script src="https://threejsfundamentals.org/threejs/resources/threejs/r105/js/controls/OrbitControls.js"></script>
     <script src="https://threejsfundamentals.org/threejs/resources/threejs/r105/js/loaders/GLTFLoader.js"></script>
-    <script src="js/functionality.js"></script>
     <link rel="stylesheet" href="styles.css">
 
 	</head>
@@ -14,14 +15,34 @@
 
     <h1 id="title">Know Your Mind </h1>
 
-    <!-- Brain -->
-    <script src="js/index.js"></script>
-    <canvas id="c"></canvas>
+		<div class="box">
+			<form>
+				<select>
+					<option value="whole">Whole Brain </option>
+					<option value="sagittal">Sagittal View</option>
+					<option value="coronal">Coronal View</option>
+				</select>
 
-    <div id="sidebar">
-      <!-- Inserted via functionality.js -->
+			</form>
+
+		</div>
+
+    <!-- Brain -->
+
+    <div id="current-display">
+
+      <canvas id="c"></canvas>
     </div>
 
 
+
+
+
+		<div id="sidebar">
+      <!-- Inserted via functionality.js -->
+    </div>
+		<script src="js/sagittal.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/coronal.js"></script>
 	</body>
 </html>
