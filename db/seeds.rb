@@ -6,4 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Region.create(name: "Basal Ganglia", description: "Regulation of movement", conditions: "Parkinson's Disease, Huntington's Disease", image_url: "https://www.researchgate.net/profile/Tomas_Melicher2/publication/325942843/figure/fig1/AS:668264602554369@1536338105010/Fig-1-Structure-of-Basal-ganglia.png")
+# Basal Ganglia image - to be added later
+# image_url: "https://www.researchgate.net/profile/Tomas_Melicher2/publication/325942843/figure/fig1/AS:668264602554369@1536338105010/Fig-1-Structure-of-Basal-ganglia.png"
+
+Region.destroy_all
+
+
+Region.create(name: "Basal Ganglia", description: "Regulation of movement", conditions: "Parkinson's Disease, Huntington's Disease",
+  location: "Midbrain", position_left: 45, position_top: 57)

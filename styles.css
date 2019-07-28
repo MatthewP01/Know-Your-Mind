@@ -48,6 +48,16 @@ h1 {
   width: 30%;
 }
 
+
+
+
+
+
+
+/* Brain regions - to be added to backend */
+
+
+
 #basal-ganglia {
   width: 1.5%;
   height: auto;
@@ -56,6 +66,90 @@ h1 {
   top: 57%;
   /* z-index: 1; */
 }
+
+#corpus-collosum {
+  position: fixed;
+  width: 1.5%;
+  left: 47%;
+  top: 41%;
+
+}
+
+#cerebellum {
+  position: fixed;
+  width: 1.5%;
+  left: 59%;
+  top: 58%;
+}
+
+#thalamus {
+  position: fixed;
+  width: 1.5%;
+  left: 44%;
+  top: 46%;
+}
+
+#pituitary {
+  position: fixed;
+  width: 1.5%;
+  left: 45%;
+  top: 57%;
+}
+
+#motor-cortex {
+  position: fixed;
+  width: 1.5%;
+  left: 50%;
+  top: 30%;
+}
+
+#hypothalamus {
+  position: fixed;
+  width: 1.5%;
+  left: 47.5%;
+  top: 52.5%;
+}
+
+#amygdala {
+  position: fixed;
+  width: 1.5%;
+  left: 51%;
+  top: 64%;
+}
+
+#gyrus {
+  position: fixed;
+  width: 1.5%;
+  left: 37%;
+  top: 33%;
+}
+
+#brain-stem {
+  position: fixed;
+  width: 1.5%;
+  left: 51%;
+  top: 70%;
+}
+
+#cingulate-gyrus {
+  position: fixed;
+  width: 1.5%;
+  left: 45%;
+  top: 34%;
+}
+
+
+.node:hover {
+  background: blue;
+}
+
+
+/* End of regions */
+
+
+
+
+
 
 /* Selection Bar */
 .box {

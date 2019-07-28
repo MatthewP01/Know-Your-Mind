@@ -16,10 +16,11 @@ document.addEventListener("DOMContentLoaded", function(){
       // console.log('clicked')
       currentDisplay.innerHTML =
       `<img src = "assets/coronal_slice.png" id="coronal">
+      <img src= "assets/node_icon_burned.png" class = "node" id="basal-ganglia">
+      <img src= "assets/node_icon_burned.png" class = "node" id="corpus-collosum">
+      <img src= "assets/node_icon_burned.png" class = "node" id="amygdala">
+      <img src= "assets/node_icon_burned.png" class = "node" id="gyrus">
 
-      <div id="tooltip">
-      <img src= "assets/node_icon_burned.png" id="basal-ganglia">
-      </div>
       `
 
       const nodePress = document.querySelector('#basal-ganglia')
@@ -98,7 +99,14 @@ document.addEventListener("DOMContentLoaded", function(){
 
     else if (e.target.value === "sagittal"){
       currentDisplay.innerHTML =
-      `<img src = "assets/saggital_slice.png" id="sagittal">`
+      `<img src = "assets/saggital_slice.png" id="sagittal">
+      <img src= "assets/node_icon_burned.png" class = "node" id="cerebellum">
+      <img src= "assets/node_icon_burned.png" class = "node" id="thalamus">
+      <img src= "assets/node_icon_burned.png" class = "node" id="pituitary">
+      <img src= "assets/node_icon_burned.png" class = "node" id="motor-cortex">
+      <img src= "assets/node_icon_burned.png" class = "node" id="hypothalamus">
+      <img src= "assets/node_icon_burned.png" class = "node" id="brain-stem">
+      <img src= "assets/node_icon_burned.png" class = "node" id="cingulate-gyrus">`
     }
   })
 
