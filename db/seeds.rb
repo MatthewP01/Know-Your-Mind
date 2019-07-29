@@ -13,4 +13,9 @@ Region.destroy_all
 
 
 Region.create(name: "Basal Ganglia", description: "Regulation of movement", conditions: "Parkinson's Disease, Huntington's Disease",
-  location: "Midbrain", position_left: 45, position_top: 57)
+  location: "Midbrain", view: "coronal", position_left: 45, position_top: 57)
+
+  Region.create(name: "Another Region", description: "Another description", conditions: "Other conditions",
+    location: "Everywhere", view: "coronal", position_left: 50, position_top: 40)
+
+puts "🧠🧠 Seeded 🧠🧠"

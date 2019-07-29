@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2019_07_24_140118) do
     t.string "description"
     t.string "conditions"
     t.string "location"
+    t.string "view"
     t.integer "position_left"
     t.integer "position_top"
     t.datetime "created_at", null: false

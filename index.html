@@ -1,4 +1,5 @@
 <html>
+
 	<head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -8,13 +9,18 @@
     <script src="https://threejsfundamentals.org/threejs/resources/threejs/r105/three.min.js"></script>
     <script src="https://threejsfundamentals.org/threejs/resources/threejs/r105/js/controls/OrbitControls.js"></script>
     <script src="https://threejsfundamentals.org/threejs/resources/threejs/r105/js/loaders/GLTFLoader.js"></script>
+		<script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="sidebar_styles.css">
 
 	</head>
+
 	<body>
 
     <h1 id="title">Know Your Mind </h1>
 
+		<!-- Brain view selection -->
 		<div class="box">
 			<form>
 				<select>
@@ -22,26 +28,29 @@
 					<option value="sagittal">Sagittal View</option>
 					<option value="coronal">Coronal View</option>
 				</select>
-
 			</form>
-
 		</div>
 
-    <!-- Brain -->
-
+    <!-- Show Current Brain View -->
     <div id="current-display">
-
+			<!-- Once page opens, show the 3D model -->
       <canvas id="c"></canvas>
     </div>
 
+		<!-- sidebar to be added here -->
+		<div class="sidebar">
+
+		</div>
+
+		<!-- Info Icon -->
+		<div class="icon">
+			<i id="info-circle" class="fas fa-info-circle"></i>
+			<i id= "brain-icon" class="fas fa-brain"></i>
+		</div>
 
 
-
-
-		<div id="sidebar">
-      <!-- Inserted via functionality.js -->
-    </div>
 		<script src="js/index.js"></script>
 		<script src="js/toggleDisplay.js"></script>
+		<script src="js/interface.js"></script>
 	</body>
 </html>

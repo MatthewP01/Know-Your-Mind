@@ -12,87 +12,28 @@ document.addEventListener("DOMContentLoaded", function(){
       `<canvas id="c"></canvas>`
       main()
     }
+
     else if (e.target.value === "coronal") {
-      // console.log('clicked')
+      // Render coronal view to page
       currentDisplay.innerHTML =
-      `<img src = "assets/coronal_slice.png" id="coronal">
-      <img src= "assets/node_icon_burned.png" class = "node" id="basal-ganglia">
-      <img src= "assets/node_icon_burned.png" class = "node" id="corpus-collosum">
-      <img src= "assets/node_icon_burned.png" class = "node" id="amygdala">
-      <img src= "assets/node_icon_burned.png" class = "node" id="gyrus">
+      `<img src = "assets/coronal_slice.png" id="coronal">`
 
-      `
+      // Fetch nodes from API
+      fetchData().then(data => {
+        for (let i = 0; i < data.length; i++){
+          console.log(data[i].position_top)
+          currentDisplay.innerHTML +=
+          `<img src= "assets/node_icon_burned.png" data-id = ${data[i].id} class="node" style="position:
+          fixed;top:${data[i].position_top}%;left:${data[i].position_left}%;
+          width:1.5%" >`
+        }
+      })
+      // console.log('clicked')
 
-      const nodePress = document.querySelector('#basal-ganglia')
-      const sideBar = document.querySelector('#sidebar')
-
-      nodePress.addEventListener('click', function(e){
-        sideBar.innerHTML +=
-        `<div class="wrapper">
-        <!-- Sidebar -->
-        <nav id="side-bar">
-            <div class="sidebar-header">
-                <h3>The Basal Ganglia!</h3>
-            </div>
-
-            <ul class="list-unstyled components">
-                <p>Info will go here!</p>
-                <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Home 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-
-        </nav>
-        <!-- Page Content -->
-        <div id="content">
-
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left"></i>
-                        <span>Toggle Sidebar</span>
-                    </button>
-                </div>
-            </nav>
-        </div>
-    </div>`
-
-    })
+      // <img src= "assets/node_icon_burned.png" class = "node" id="basal-ganglia">
+      // <img src= "assets/node_icon_burned.png" class = "node" id="corpus-collosum">
+      // <img src= "assets/node_icon_burned.png" class = "node" id="amygdala">
+      // <img src= "assets/node_icon_burned.png" class = "node" id="gyrus">
 
     }
 
@@ -111,3 +52,8 @@ document.addEventListener("DOMContentLoaded", function(){
   })
 
 })
+
+function fetchData(){
+  return fetch("http://localhost:3000/regions")
+  .then(res => res.json())
+}
