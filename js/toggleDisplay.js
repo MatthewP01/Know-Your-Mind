@@ -22,10 +22,16 @@ document.addEventListener("DOMContentLoaded", function(){
       fetchData().then(data => {
         for (let i = 0; i < data.length; i++){
           console.log(data[i].position_top)
+          // currentDisplay.innerHTML +=
+          // `<img src= "assets/node_icon_burned.png" data-id = ${data[i].id} class="node" style="position:
+          // fixed;top:${data[i].position_top}%;left:${data[i].position_left}%;
+          // width:1.5%" >`
           currentDisplay.innerHTML +=
-          `<img src= "assets/node_icon_burned.png" data-id = ${data[i].id} class="node" style="position:
+          `<i class="fab fa-first-order-alt selector" data-id = ${data[i].id} style="position:
           fixed;top:${data[i].position_top}%;left:${data[i].position_left}%;
-          width:1.5%" >`
+          font-size: 1.5em; color:#009900;"></i>
+          `
+          // <img src= "assets/node_icon_burned.png" style="position:fixed;top:50%;left:50%;width:1.5%">
         }
       })
       // console.log('clicked')

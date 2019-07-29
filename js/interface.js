@@ -2,7 +2,8 @@ const currentDisplay = document.querySelector('#current-display')
 const sideBar = document.querySelector('.sidebar')
 
 currentDisplay.addEventListener('click', function(e){
-  if (e.target.className === "node"){
+  if (e.target.className === "fab fa-first-order-alt selector"){
+    console.log('clicked')
     nodeId = e.target.dataset.id
     fetchNodeData(nodeId)
     .then(data => {
