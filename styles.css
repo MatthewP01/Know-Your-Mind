@@ -50,121 +50,9 @@ h3 {
   color: #fff;
   transition: all 0.3s; }
 
-#coronal {
-  position: fixed;
-  top: 35%;
-  left: 30%;
-}
-
-#sagittal {
-  position: fixed;
-  top: 35%;
-  left: 35%;
-  width: 30%;
-}
-
-
-
-
-
-
-
-/* Brain regions - to be added to backend */
-
-
-
-#basal-ganglia {
-  width: 1.5%;
-  height: auto;
-  position: fixed;
-  left: 45%;
-  top: 57%;
-  /* z-index: 1; */
-}
-
-#corpus-collosum {
-  position: fixed;
-  width: 1.5%;
-  left: 47%;
-  top: 41%;
-
-}
-
-#cerebellum {
-  position: fixed;
-  width: 1.5%;
-  left: 58%;
-  top: 67%;
-}
-
-#thalamus {
-  position: fixed;
-  width: 1.5%;
-  left: 50.5%;
-  top: 55%;
-}
-
-#pituitary {
-  position: fixed;
-  width: 1.5%;
-  left: 45%;
-  top: 67%;
-}
-
-#motor-cortex {
-  position: fixed;
-  width: 1.5%;
-  left: 50%;
-  top: 38%;
-}
-
-#hypothalamus {
-  position: fixed;
-  width: 1.5%;
-  left: 47.5%;
-  top: 62.5%;
-}
-
-#amygdala {
-  position: fixed;
-  width: 1.5%;
-  left: 51%;
-  top: 64%;
-}
-
-#gyrus {
-  position: fixed;
-  width: 1.5%;
-  left: 37%;
-  top: 33%;
-}
-
-#brain-stem {
-  position: fixed;
-  width: 1.5%;
-  left: 51%;
-  top: 80%;
-}
-
-#cingulate-gyrus {
-  position: fixed;
-  width: 1.5%;
-  left: 45%;
-  top: 44%;
-}
-
-
 .node:hover {
   background: yellow;
 }
-
-
-/* End of regions */
-
-
-
-
-
 
 /* Selection Bar */
 .box {
@@ -230,14 +118,6 @@ h3 {
   to {color: yellow;}
 }
 
-
-
-
-
-/* To be removed */
-
-
-
 #instructions {
   position: fixed;
   left: 43%;
@@ -246,8 +126,6 @@ h3 {
   font-family: 'Lobster';
   text-shadow: 1px 1px 2px pink;
 }
-
-
 
 .selector:hover {
   font-size: 2.5em;
