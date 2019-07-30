@@ -20,7 +20,7 @@
 
 		<!-- Synapse/Flash title -->
 		<div class="text-effect">
-      <h1 class="neon" data-text="Know Your Mind" contenteditable>Know Your Mind</h1>
+      <h1 class="neon" data-text="Know Your Mind" contenteditable id="title-text">Know Your Mind</h1>
       <div class="gradient"></div>
       <div class="spotlight"></div>
   </div>
@@ -44,12 +44,15 @@
     <!-- Show Current Brain View -->
     <div id="current-display">
 			<!-- Once page opens, show the 3D model -->
+			<p id ="instructions"><i>Drag Brain to view lobes</i></p>
       <canvas id="c"></canvas>
     </div>
 
 		<!-- sidebar to be added here -->
 		<div class="sidebar">
-
+			<div id="mySidenav" class="sidenav">
+		    
+		  </div>
 		</div>
 
 		<!-- Info Icon -->

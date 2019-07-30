@@ -1,11 +1,12 @@
 
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
 
 body {
   margin: 0;
   height: 100%;
-  background: url("https://media.istockphoto.com/photos/black-wall-texture-2-picture-id693317332?k=6&m=693317332&s=612x612&w=0&h=j_OfF14rFTH_bKrSutjc1XPKQS6x2MXpQ0d6Q_KwRBc=") no-repeat center center;
+  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/Hnd01gaCiu89hpk4/videoblocks-network-on-a-black-background-cinematic-plexus-background-seamless-loop_hagskxz4rm_thumbnail-full01.png") no-repeat center center;
   background-size: cover;
 
 }
@@ -92,36 +93,36 @@ h3 {
 #cerebellum {
   position: fixed;
   width: 1.5%;
-  left: 59%;
-  top: 58%;
+  left: 58%;
+  top: 67%;
 }
 
 #thalamus {
   position: fixed;
   width: 1.5%;
-  left: 44%;
-  top: 46%;
+  left: 50.5%;
+  top: 55%;
 }
 
 #pituitary {
   position: fixed;
   width: 1.5%;
   left: 45%;
-  top: 57%;
+  top: 67%;
 }
 
 #motor-cortex {
   position: fixed;
   width: 1.5%;
   left: 50%;
-  top: 30%;
+  top: 38%;
 }
 
 #hypothalamus {
   position: fixed;
   width: 1.5%;
   left: 47.5%;
-  top: 52.5%;
+  top: 62.5%;
 }
 
 #amygdala {
@@ -142,14 +143,14 @@ h3 {
   position: fixed;
   width: 1.5%;
   left: 51%;
-  top: 70%;
+  top: 80%;
 }
 
 #cingulate-gyrus {
   position: fixed;
   width: 1.5%;
   left: 45%;
-  top: 34%;
+  top: 44%;
 }
 
 
@@ -255,7 +256,14 @@ h3 {
 }
 
 
-
+#instructions {
+  position: fixed;
+  left: 43%;
+  top: 34%;
+  color: white;
+  font-family: 'Lobster';
+  text-shadow: 1px 1px 2px pink;
+}
 
 
 

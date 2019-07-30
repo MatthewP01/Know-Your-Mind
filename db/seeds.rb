@@ -15,7 +15,36 @@ Region.destroy_all
 Region.create(name: "Basal Ganglia", description: "Regulation of movement", conditions: "Parkinson's Disease, Huntington's Disease",
   location: "Midbrain", view: "coronal", position_left: 44, position_top: 69)
 
-  Region.create(name: "Corpus Collosum", description: "Another description", conditions: "Other conditions",
-    location: "Everywhere", view: "coronal", position_left: 47, position_top: 56)
+Region.create(name: "Corpus Collosum", description: "Another description", conditions: "Other conditions",
+  location: "Everywhere", view: "coronal", position_left: 47, position_top: 56)
+
+Region.create(name: "Cerebellum", description: "Another description", conditions: "Other conditions",
+  location: "Everywhere", view: "sagittal", position_left: 58, position_top: 67)
+
+Region.create(name: "Thalamus", description: "Another description", conditions: "Other conditions",
+  location: "Everywhere", view: "sagittal", position_left: 50.5, position_top: 55)
+
+Region.create(name: "Pituitary Gland", description: "Another description", conditions: "Other conditions",
+  location: "Everywhere", view: "sagittal", position_left: 45, position_top: 67)
+
+Region.create(name: "Motor Cortex", description: "Another description", conditions: "Other conditions",
+  location: "Everywhere", view: "sagittal", position_left: 50, position_top: 38)
+
+Region.create(name: "Hypothalamus", description: "Another description", conditions: "Other conditions",
+  location: "Everywhere", view: "sagittal", position_left: 47.5, position_top: 62.5)
+
+Region.create(name: "Amygdala", description: "Another description", conditions: "Other conditions",
+  location: "Everywhere", view: "sagittal", position_left: 51, position_top: 64)
+
+# Region.create(name: "Gryi and Sulci", description: "Another description", conditions: "Other conditions",
+#   location: "Everywhere", view: "coronal", position_left: 58, position_top: 67)
+
+Region.create(name: "Brain Stem", description: "Another description", conditions: "Other conditions",
+  location: "Everywhere", view: "sagittal", position_left: 51, position_top: 80)
+
+Region.create(name: "Cingulate Gyrus", description: "Another description", conditions: "Other conditions",
+  location: "Everywhere", view: "sagittal", position_left: 45, position_top: 44)
+
+
 
 puts "🧠🧠 Seeded 🧠🧠"
