@@ -10,8 +10,7 @@
   overflow: hidden;
   position: relative;
   top: 0;
-  filter: contrast(110%) brightness(100%);
-
+  filter: contrast(110%) brightness(200%);
 }
 
 .neon {

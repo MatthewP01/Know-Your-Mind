@@ -8,7 +8,7 @@ currentDisplay.addEventListener('click', function(e){
     fetchNodeData(nodeId)
     .then(data => {
       createSidebar(data)
-      sideBar.style.width = '250px';
+      onClick(e.target)
     })
   }
 })
@@ -16,8 +16,7 @@ currentDisplay.addEventListener('click', function(e){
 // Close description upon click
 sideBar.addEventListener('click', function(e){
   if (e.target.tagName === "I"){
-    sideBar.innerHTML = ``
-    sideBar.style.width = '0px';
+    pressX(e.target)
   }
 })
 
@@ -25,7 +24,8 @@ sideBar.addEventListener('click', function(e){
 // Modal with app info
 body.addEventListener('click', function(e){
   if (e.target.id === "info-circle"){
-    console.log('clicked')
+    console.log('click')
+    // currentDisplay.innerHTML +=
   }
 })
 
@@ -40,4 +40,27 @@ function createSidebar(promise){
   <p><u>Function:</u><br><strong>${promise.description}</strong></p>
   <p><u>Conditions Associated with the ${promise.name}:</u> <strong>${promise.conditions}</strong></p>
   <p class="close-button"><i class="far fa-times-circle"></i></p>`
+}
+
+// Sidebar function results in opacity
+function onClick(targetNode){
+  sideBar.style.width = '250px';
+  body.querySelector('.box').style.opacity = 0.3;
+  body.querySelector('.text-effect').style.opacity = 0.3;
+  body.querySelector('.icons').style.opacity = 0.3;
+  // currentDisplay.querySelector('.fab fa-first-order-alt selector').style.color = 'yellow';
+  targetNode.id = 'selected'
+  currentDisplay.style.opacity = 0.6;
+}
+
+// Remove opacity when closing sidebar
+function pressX(){
+  sideBar.innerHTML = ``
+  sideBar.style.width = '0px';
+  body.querySelector('.box').style.opacity = 1;
+  body.querySelector('.text-effect').style.opacity = 0.75;
+  body.querySelector('.icons').style.opacity = 1;
+  currentDisplay.style.opacity = 1;
+  document.querySelector('#selected').id = '';
+
 }

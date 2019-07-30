@@ -238,24 +238,6 @@ h3 {
 
 
 
-
-
-
-.selector { /* Basal Ganglia */
-  position: fixed;
-  top: 69%;
-  left: 44%;
-  font-size: 1.8em;
-  color: red;
-}
-
-.coprus-collosum {
-  position: fixed;
-  top: 56%;
-  left: 47%;
-}
-
-
 #instructions {
   position: fixed;
   left: 43%;
@@ -296,7 +278,12 @@ h3 {
   color: white;
 }
 
-
+.selector {
+  color: #009900;
+}
+#selected {
+  color: red;
+}
 
 
 /*# sourceMappingURL=styles.css.map */
