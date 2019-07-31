@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
       currentDisplay.innerHTML = `
       <canvas id="c"></canvas>
-      <p id ="instructions"><i>Drag Brain to view lobes</i></p>`
+      <p id ="instructions"><i>Drag Brain to view lobes</i></p>
+      <button class = "lobe-button" type="button" name="button">What am I looking at?</button>`
 
       // Re-render 3D model on index.html from index.js
 

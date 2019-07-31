@@ -1,7 +1,10 @@
-
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
 @import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Barriecito');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
 
 body {
   margin: 0;
@@ -50,6 +53,19 @@ h3 {
   color: #fff;
   transition: all 0.3s; }
 
+#coronal {
+  position: absolute;
+  top: 35%;
+  left: 30%;
+}
+
+#sagittal {
+  position: fixed;
+  top: 35%;
+  left: 35%;
+  width: 30%;
+}
+
 .node:hover {
   background: yellow;
 }
@@ -95,7 +111,6 @@ h3 {
   color: gold;
 
 }
-
 
 .box::before {
   content: "\f13a";
@@ -163,5 +178,91 @@ h3 {
   color: red;
 }
 
+.info-text {
+  font-size: 5px;
+  font-family: 'Nunito';
+}
+
+.anatomical-feature {
+  color: palegoldenrod;
+}
 
 /*# sourceMappingURL=styles.css.map */
+
+#frontal-lobe {
+  color: #2c9c91; /* turquoise */
+}
+
+#occipital-lobe {
+  color: red;
+}
+
+#parietal-lobe {
+  color: yellow;
+}
+
+#temporal-lobe {
+  color: green;
+}
+
+#cerebellum {
+  color: #990000 /* crimson */
+}
+
+.lobe-button {
+  margin-left: -5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Orbitron", regular;
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: 4px;
+  position: fixed;
+  left: 68%;
+  top: 50%;
+  width: 200px;
+  height: 80px;
+  background-color: rgb(142,131,200);
+  border: none;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  box-shadow: 0 5px 15px #193047;
+  border-radius: 4px;
+}
+
+.lobe-button:hover {
+  background: cyan;
+  box-shadow: 0px 2px 10px 5px #1abc9c;
+  color: #000;
+}
+
+.lobe-button:after {
+  content: "";
+  background: #1abc9c;
+  display: block;
+  position: absolute;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.lobe-button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.lobe-button:focus {
+  outline:0;
+}
+
+#study-btn {
+  left: 18%;
+  padding: 18px;
+  z-index: 2;
+}

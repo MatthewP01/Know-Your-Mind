@@ -42,11 +42,18 @@
 			</form>
 		</div>
 
+		<!-- Button acting as a path to study card creator -->
+		<div class="button-navigation">
+			<button class = "lobe-button" id = "study-btn" type="button" name="button">Create a Study Card!</button>
+		</div>
+
+
     <!-- Show Current Brain View -->
     <div id="current-display">
 			<!-- Once page opens, show the 3D model -->
 			<p id ="instructions"><i>Drag Brain to view lobes</i></p>
       <canvas id="c"></canvas>
+			<button class = "lobe-button" type="button" name="button">What am I looking at?</button>
     </div>
 
 		<!-- sidebar to be added here -->
@@ -66,5 +73,6 @@
 		<script src="js/index.js"></script>
 		<script src="js/toggleDisplay.js"></script>
 		<script src="js/interface.js"></script>
+		<script src="js/studyButton.js"></script>
 	</body>
 </html>

@@ -24,11 +24,9 @@
 .sidenav p:hover {
   /* color: #f1f1f1; */
   /* color: #818181; */
-  color: palegoldenrod;
+  color: #b1d9f4;
 
 }
-
-
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
