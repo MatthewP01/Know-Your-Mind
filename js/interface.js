@@ -4,8 +4,8 @@ const body = document.querySelector('body')
 
 currentDisplay.addEventListener('click', function(e){
   if (e.target.className === "fab fa-first-order-alt selector"){
-    nodeId = e.target.dataset.id
-    fetchNodeData(nodeId)
+    regionId = e.target.dataset.id
+    fetchRegionData(regionId)
     .then(data => {
       createSidebar(data)
       onClick(e.target)
@@ -37,8 +37,8 @@ body.addEventListener('click', function(e){
   }
 })
 
-function fetchNodeData(nodeId){
-  return fetch(`http://localhost:3000/regions/${nodeId}`)
+function fetchRegionData(regionId){
+  return fetch(`http://localhost:3000/regions/${regionId}`)
   .then(res => res.json())
 }
 
