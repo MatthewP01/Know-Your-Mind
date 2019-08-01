@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 @import url('https://fonts.googleapis.com/css?family=Barriecito');
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 
 
 body {
@@ -302,8 +303,9 @@ h3 {
   /* line-height: 260px; */
   color: white;
   text-align: center;
+  font-family: 'Indie Flower';
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
   backface-visibility: hidden;
 }
 
@@ -314,4 +316,35 @@ h3 {
 .card__face--back {
   background: blue;
   transform: rotateY(180deg);
+}
+
+.term {
+  /* position: absolute; */
+  text-align: center;
+
+  font-size: 32px;
+}
+
+.region-form {
+  position: fixed;
+  top: 30%;
+  left: 45%;
+}
+
+.submit-btn {
+  position: fixed;
+  left: 46.5%;
+  top: 40%;
+}
+
+.create-your-own {
+  position: fixed;
+  left:58%;
+  top: 29.5%;
+  color: yellow;
+  font-family: 'Orbitron';
+}
+
+.main-page {
+  height: 400px;
 }

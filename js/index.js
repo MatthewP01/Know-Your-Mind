@@ -1,5 +1,5 @@
 function main() {
-  
+
   // Three.js tutorials used
 
   // Render the data to the canvas
@@ -35,9 +35,8 @@ function main() {
   // Adding a while shine/shadow to brain
   {
     const color = 0xFFFFFF;
-    const intensity = 1.3;
+    const intensity = 1.7;
     const light = new THREE.DirectionalLight(color, intensity);
-    light.position.set(-1, 2, 4);
     scene.add(light);
   }
 

@@ -1,74 +1,71 @@
 const buttonNav = document.querySelector(".button-navigation")
 const mainPage = document.querySelector(".main-page")
 const studyCard = document.querySelector(".study-card-here")
+const form = document.createElement('form')
+const par = document.createElement('p')
 
+document.querySelector('.study-card-here')
 
 buttonNav.addEventListener('click', function(e){
   if (e.target.id === "study-btn"){
     mainPage.innerHTML = ""
     body.style.background = 'black';
 
-    // Create form on page and append
-    const form = document.createElement('form')
+    // Add some text
+    par.className = "create-your-own"
+    mainPage.appendChild(par)
+    par.innerText = "Or click HERE create your own custom card!"
+
+    // Append form on to page
+    form.className = "region-form"
     const selector = document.createElement('select')
     mainPage.appendChild(form)
     form.appendChild(selector)
 
     fetchData().then(data => {
       for(let i = 0; i < data.length; i++){
-        selector.innerHTML += `<option value="${data[i].id}">${data[i].name}
+        selector.innerHTML += `<option value="${data[i].id}" class = "box">${data[i].name}
         </option>`
       }
-      form.innerHTML += `<input type="submit"></input>`
+      form.innerHTML += `<br><input type="submit" class = "submit-btn" value="Create Card!"></input>`
     })
 
     // Show an example study card for the user
-    createStudyCard("Key Term", "Definition")
-
-    const card = document.querySelector('.card')
-    card.addEventListener('click', function() {
-      card.classList.toggle('is-flipped');
-    });
+    createStudyCard("Anatomical Region", "Definition")
   }
 })
 
-document.addEventListener('submit', function(e){
+mainPage.addEventListener('submit', function(e){
   e.preventDefault()
 
   // Extract region id from the selected option tag
   const regionId = e.target.children[0].value
-  // const definition = e.target.children[1].value
 
+  // Fetch the region's data
   fetchRegionData(regionId).then(data => {
     let description = data.description
     let conditions = data.conditions
     let location = data.location
 
     let details =
-    `<p><u>Description:</u> ${description}</p>
-    <p><u>Location:</u> ${location}</p>
-    <p><u>Conditions:</u> ${conditions}</p>`
+    `<p><u>Description:</u> <br>${description}</p>
+    <p><u>Location:</u> <br>${location}</p>
+    <p><u>Conditions:</u> <br>${conditions}</p>`
 
     createStudyCard(data.name, details)
-
-    const card = document.querySelector('.card')
-    card.addEventListener('click', function() {
-      card.classList.toggle('is-flipped');
-    });
   })
-
-  const card = document.querySelector('.card')
-  card.addEventListener('click', function() {
-    card.classList.toggle('is-flipped');
-  });
 })
 
 function createStudyCard(term, definition){
   studyCard.innerHTML = `
   <div class="scene scene--card">
     <div class="card">
-      <div class="card__face card__face--front">${term}</div>
+      <div class="card__face card__face--front"><p class = "term"><u>Key Term:</u> <br><br>${term}</p></div>
         <div class="card__face card__face--back">${definition}</div>
       </div>
     </div>`
+    const card = document.querySelector('.card')
+    card.addEventListener('click', function() {
+      card.classList.toggle('is-flipped');
+    });
 }
