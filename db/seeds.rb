@@ -48,7 +48,10 @@ Region.create(name: "Brain Stem", description: "Provides the main motor and sens
 Region.create(name: "Cingulate Gyrus", description: "An integral part of the limbic system, which is involved with emotion formation and processing, learning, and memory", conditions: "Schizophrenia",
   location: "Medial region of cerebral cortex", view: "sagittal", position_left: 45, position_top: 44)
 
-
-
-
+# Links
+# basal_ganglia = Region.find_by(name: "Basal Ganglia")
+#
+# Link.create(anatomy_link: "https://www.neuroscientificallychallenged.com/blog/what-are-basal-ganglia", disease_link: "https://jnnp.bmj.com/content/76/8/1058", region_id: basal_ganglia.id)
+#
+#
 puts "🧠🧠 Seeded 🧠🧠"

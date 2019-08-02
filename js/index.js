@@ -25,6 +25,7 @@ function main() {
   // Load in the GLTF brain model
   const gltfLoader = new THREE.GLTFLoader();
 
+  // 3D model taken from 'Brain Project' by Dean Lavery on Sketchfab
   gltfLoader.load('../assets/brain_project/scene.gltf', (gltf) => {
     const loadedBrain = gltf.scene;
 

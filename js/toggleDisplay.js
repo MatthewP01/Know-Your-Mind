@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(){
+\document.addEventListener("DOMContentLoaded", function(){
 
   const currentDisplay = document.querySelector('#current-display')
   const selectionField = document.querySelector('select')

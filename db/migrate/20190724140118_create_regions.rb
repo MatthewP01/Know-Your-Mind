@@ -9,7 +9,6 @@ class CreateRegions < ActiveRecord::Migration[5.2]
       # t.string :image_url
       t.integer :position_left
       t.integer :position_top
-
       t.timestamps
     end
   end
