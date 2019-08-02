@@ -9,12 +9,12 @@ document.querySelector('.study-card-here')
 buttonNav.addEventListener('click', function(e){
   if (e.target.id === "study-btn"){
     mainPage.innerHTML = ""
-    body.style.background = 'black';
+    document.body.style.backgroundImage = "url('http://www.sclance.com/backgrounds/modern-background-black-and-white/modern-background-black-and-white_1537963.jpg')";
 
     // Add some text
     par.className = "create-your-own"
     mainPage.appendChild(par)
-    par.innerText = "Or click HERE create your own custom card!"
+    par.innerText = "Choose a region to generate a study card!"
 
     // Append form on to page
     form.className = "region-form"
@@ -27,7 +27,7 @@ buttonNav.addEventListener('click', function(e){
         selector.innerHTML += `<option value="${data[i].id}" class = "box">${data[i].name}
         </option>`
       }
-      form.innerHTML += `<br><input type="submit" class = "submit-btn" value="Create Card!"></input>`
+      form.innerHTML += `<br><input type="submit" class = "submit-btn lobe-button submission" value="Create Card!"></input>`
     })
 
     // Show an example study card for the user

@@ -32,8 +32,10 @@ sideBar.addEventListener('click', function(e){
 // Modal with app info
 body.addEventListener('click', function(e){
   if (e.target.id === "info-circle"){
-    console.log('click')
-    // currentDisplay.innerHTML +=
+    document.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+  }
+  else if (e.target.id === "brain-icon"){
+    document.location.href = 'https://neuroscience.yale.edu/';
   }
 })
 
@@ -82,11 +84,41 @@ function pressX(){
 
 function createLobeSideBar(){
   sideBar.innerHTML =
-  `<p class="lobe-label" id="frontal-lobe"> Frontal Lobe</p><br>
-   <p class="lobe-label" id="temporal-lobe"> Temporal Lobe</p><br>
-   <p class="lobe-label" id="occipital-lobe"> Occipital Lobe</p><br>
-   <p class="lobe-label" id="parietal-lobe"> Parietal Lobe</p><br>
-   <p class="lobe-label" id="cerebellum"> Cerebellum</p><br>
+  `<p class="lobe-label" id="frontal-lobe"> <u>Frontal Lobe:</u> <br>
+
+  <i class="lobe-info">
+  The most recently
+  evolved part of the bain involved in reasoning, motor skills, higher level cognition, and expressive language</i></p><br>
+
+
+   <p class="lobe-label" id="temporal-lobe"> <u>Temporal Lobe:</u><br>
+
+   <i class="lobe-info">
+   The lobe at the base of the brain involved in processing sensory input into derived meanings,
+   such as in the case of emotion, memory and language comprehension</i></p><br>
+
+
+   <p class="lobe-label" id="occipital-lobe"> <u>Occipital Lobe:</u><br>
+
+   <i class="lobe-info">
+   In mammals, this lobe is visual processing center of the brain and containing most
+   of the anatomical region of the visual cortex, involved in visual decoding</i></p><br>
+
+
+   <p class="lobe-label" id="parietal-lobe"> <u>Parietal Lobe:</u><br>
+
+   <i class="lobe-info">
+   This is the middle section of the brain and it is associated with processing input from the five senses
+   as well as proprioception - one's own sense of self</i></p><br>
+
+
+   <p class="lobe-label" id="cerebellum"> <u>Cerebellum:</u><br>
+
+   <i class="lobe-info">
+   Involved in motor control and motor planning - in particular posture, equilibrium,
+   and motor learning in humans</i></p><br>
+
+
   <p class="close-button"><i class="far fa-times-circle lobe-x"></i></p>`
   currentDisplay.style.opacity = 1;
 }

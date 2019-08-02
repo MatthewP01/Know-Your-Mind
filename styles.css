@@ -5,6 +5,10 @@
 @import url('https://fonts.googleapis.com/css?family=Barriecito');
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+@import url('https://fonts.googleapis.com/css?family=Courgette');
+@import url('https://fonts.googleapis.com/css?family=Exo');
+
 
 
 body {
@@ -304,17 +308,18 @@ h3 {
   color: white;
   text-align: center;
   font-family: 'Indie Flower';
+  text-shadow: 1px 1px 2px black;
   font-weight: bold;
   font-size: 18px;
   backface-visibility: hidden;
 }
 
 .card__face--front {
-  background: red;
+  background: #ffb732;
 }
 
 .card__face--back {
-  background: blue;
+  background: #8ac6ef;
   transform: rotateY(180deg);
 }
 
@@ -328,7 +333,7 @@ h3 {
 .region-form {
   position: fixed;
   top: 30%;
-  left: 45%;
+  left: 46%;
 }
 
 .submit-btn {
@@ -347,4 +352,28 @@ h3 {
 
 .main-page {
   height: 400px;
+}
+
+.submission {
+  font-family: 'Luckiest Guy';
+  background-color: #76ff83;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, #FFF 0px 0px 15px, #b2ffff 0px 0px 20px, #b2ffff 0px 0px 30px;
+  left: 45%;
+}
+
+.lobe-label {
+  font-family: 'Exo';
+  font-size: 10px;
+}
+
+.submission:hover {
+  background: #ffe5b4;
+  color: #FFF;
+
+}
+
+.lobe-info {
+  color: white;
+  font-size: 16px;
+  font-family: 'Exo';
 }
