@@ -8,6 +8,8 @@ document.querySelector('.study-card-here')
 
 buttonNav.addEventListener('click', function(e){
   if (e.target.id === "study-btn"){
+
+    // Change background image on lick to make a study button
     mainPage.innerHTML = ""
     document.body.style.backgroundImage = "url('http://www.sclance.com/backgrounds/modern-background-black-and-white/modern-background-black-and-white_1537963.jpg')";
 

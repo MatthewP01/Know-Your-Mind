@@ -72,6 +72,7 @@ function pressXLobe(){
   body.querySelector('.text-effect').style.opacity = 0.75;
   body.querySelector('.icons').style.opacity = 1;
   currentDisplay.style.opacity = 1;
+  body.querySelector('.button-navigation').style.opacity = 1;
 
 }
 
